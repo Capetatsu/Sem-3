@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="hello()">Click kar</button>
+    <button ondblclick="hello()">Click kar</button>
+    <br />
+    <br />
+    <form action="https://httpbin.org/get" method="get">
+      <fieldset>
+        <legend>Personal Info</legend>
+        <p>
+          <label for="firstName">First Name:</label>
+          <input
+            type="text"
+            name="firstName"
+            id="firstName"
+            placeholder="Jane"
+            autocomplete="on"
+            required
+            autofocus
+          />
+        </p>
+        <p>
+          <label for="lastName">Last Name:</label>
+          <input
+            type="text"
+            name="lastName"
+            id="lastName"
+            placeholder="Doe"
+            autocomplete="on"
+            required
+          />
+        </p>
+        <p>
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="your secret"
+            required
+          />
+        </p>
+        <p>
+          <label for="phone">Phone:</label>
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            placeholder="555555555"
+            pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+            required
+          />
+        </p>
+        <p>
+          <label for="decade">Favoite decade:</label>
+          <input
+            type="number"
+            name="decade"
+            id="decade"
+            min="1950"
+            max="2030"
+            step="10"
+            value="1980"
+          />
+        </p>
+        <p>
+          <label for="coffee">Favorite coffee:</label>
+          <select name="coffee" id="coffee">
+            <optgroup label="Coffees">
+              <option value="regular coffee">Regular Coffee</option>
+              <option value="iced coffee">Iced Coffee</option>
+            </optgroup>
+            <optgroup label="Espresso Drinks">
+              <option value="lattee" selected>Lattee</option>
+              <option value="cappuccino">Cappuccino</option>
+              <option value="cortado">Cortado</option>
+              <option value="americano">Americano</option>
+            </optgroup>
+            <option value="other">Other</option>
+          </select>
+        </p>
+      </fieldset>
+      <br />
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+      <button
+        type="submit"
+        formaction="https://httpbin.org/post"
+        formmethod="post"
+      >
+        Post
+      </button>
+    </form>
+  </body>
+</html>
